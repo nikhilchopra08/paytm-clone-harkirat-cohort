@@ -3,7 +3,7 @@ name: Build and Deploy to Docker Hub
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-push:
@@ -22,7 +22,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./docker/Dockerfile.user
+        file: ./docker.Dockerfile.user
         push: true
         tags: nikhilchopra08/week-18:latest  # Replace with your Docker Hub username and repository
 
